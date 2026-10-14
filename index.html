@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregável Web - Objetos, Dados e Assincronismo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .error {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .loading {
+            color: #f0ad4e;
+            font-weight: bold;
+        }
+        .success {
+            color: #5cb85c;
+        }
+        img {
+            max-width: 120px;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Consumo de APIs e Assincronismo</h1>
+    </header>
+
+    <main>
+        <!-- Parte 2: Buscador de CEP -->
+        <section>
+            <h2>Buscador de CEP</h2>
+            <form id="form-cep">
+                <label for="input-cep">Digite o CEP (8 dígitos):</label>
+                <input type="text" id="input-cep" placeholder="Ex: 01001000" maxlength="9">
+                <button type="submit" id="btn-cep">Buscar CEP</button>
+            </form>
+            
+            <p id="status-cep"></p>
+            
+            <div id="resultado-cep"></div>
+
+            <h3>Histórico de Pesquisas</h3>
+            <ul id="historico-cep"></ul>
+        </section>
+
+        <!-- Parte 3: Mini Pokédex -->
+        <section>
+            <h2>Mini Pokédex</h2>
+            <form id="form-pokemon">
+                <label for="input-pokemon">Nome do Pokémon:</label>
+                <input type="text" id="input-pokemon" placeholder="Ex: pikachu, charizard...">
+                <button type="submit" id="btn-pokemon">Buscar Pokémon</button>
+            </form>
+
+            <p id="status-pokemon"></p>
+
+            <div id="resultado-pokemon"></div>
+        </section>
+    </main>
+
+    <!-- Importação do script principal -->
+    <script src="app.js"></script>
+</body>
+</html>
